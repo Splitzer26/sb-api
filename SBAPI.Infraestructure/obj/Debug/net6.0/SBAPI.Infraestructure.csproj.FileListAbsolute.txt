@@ -1,0 +1,17 @@
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Infraestructure.deps.json
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Infraestructure.dll
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Infraestructure.pdb
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.csproj.AssemblyReference.cache
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.AssemblyInfo.cs
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.dll
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\refint\SBAPI.Infraestructure.dll
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.pdb
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\ref\SBAPI.Infraestructure.dll
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Application.dll
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Domain.dll
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Application.pdb
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\bin\Debug\net6.0\SBAPI.Domain.pdb
+C:\Users\josec\Desktop\SB-API\SBAPI\SBAPI.Infraestructure\obj\Debug\net6.0\SBAPI.Infraestructure.csproj.CopyComplete
