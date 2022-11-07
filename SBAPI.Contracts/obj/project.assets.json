@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj",
+      "projectUniqueName": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Contracts\\SBAPI.Contracts.csproj",
       "projectName": "SBAPI.Contracts",
-      "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj",
+      "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Contracts\\SBAPI.Contracts.csproj",
       "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\obj\\",
+      "outputPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Contracts\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

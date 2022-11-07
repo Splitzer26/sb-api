@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj": {}
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj": {
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj",
         "projectName": "SBAPI.Domain",
-        "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,8 @@
               "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
             }

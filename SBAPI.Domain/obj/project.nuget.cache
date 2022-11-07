@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KcgfBjXJxUQ9JQkDNtJfwxCXY8d6nQLcHwHYSSycTt9BWwgx5mDwWSF8+pGLp34n03lktmbWCMBapREOqeTUYQ==",
+  "dgSpecHash": "ZpcGFA3hrE9bToc+ULMLfwfyYhAwpDudn4d1jqzc99kgBTwyasZFH2aR0HpmCyq1IQmhCgxi6RgI6xXF1lz9Cw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj",
+  "projectFilePath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josec\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

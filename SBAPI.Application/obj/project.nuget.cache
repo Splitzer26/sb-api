@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rS61zoFP+jqao9lXb1W/pmyVxhQD6QzUXKZQsVCwxRbQF4yJLWSsGCE1b1KfSgk4o/cR6quWcJBzuBW+T/x2Vw==",
+  "dgSpecHash": "ztQlKpZAFSYeLK0eXCna3uwNouDyQm/o5G8tXpEB5K/2cuFmvPWJLrQSHm63jma3wmSEvfSL1cuo266Ppg8nIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj",
+  "projectFilePath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josec\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
