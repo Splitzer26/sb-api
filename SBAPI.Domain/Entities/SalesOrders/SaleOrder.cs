@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Clients;
+using SBAPI.Domain.Entities.ProductsToSale;
 
 namespace SBAPI.Domain.Entities.SalesOrders
 {
@@ -19,6 +20,7 @@ namespace SBAPI.Domain.Entities.SalesOrders
         public string Serie { get; set; } = null!;
         public int ClientId { get; set; }
         public virtual Client Supplier { get; set; } = null!;
+        public ICollection<ProductToSell> ProductsToSale { get; set; } = null!;
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float ExcentValue { get; set; }

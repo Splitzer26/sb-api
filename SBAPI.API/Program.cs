@@ -1,9 +1,11 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using SBAPI.API.Errors;
 using SBAPI.API.Filters;
 using SBAPI.Application;
+using SBAPI.Domain;
 using SBAPI.Infraestructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
     .AddApplication()
     .AddInfraestructure(builder.Configuration);
     builder.Services.AddControllers();
+    builder.Services.AddDbContext<SmartContext>(options => 
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"))
+                     );
     builder.Services.AddSingleton<ProblemDetailsFactory, SBProblemDetailsFactory>();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
@@ -24,7 +29,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 {
-    app.UseExceptionHandler("/error");
+    //app.UseExceptionHandler("/error");
     app.UseHttpsRedirection();
     app.MapControllers();
     if (app.Environment.IsDevelopment())
@@ -33,10 +38,14 @@ var app = builder.Build();
         app.UseSwaggerUI();
        // app.UseAuthorization();
     }
-    app.Run();
-
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var dataContext = scope.ServiceProvider.GetRequiredService<SmartContext>();
+    dataContext.Database.Migrate();
+}
+app.Run();
 // Configure the HTTP request pipeline.
 
 

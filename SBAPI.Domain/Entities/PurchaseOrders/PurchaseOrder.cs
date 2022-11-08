@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Suppliers;
+using SBAPI.Domain.Entities.ProductsToBuy;
 
 namespace SBAPI.Domain.Entities.PurchaseOrders
 {
@@ -17,6 +18,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public string Serie { get; set; } = null!;
         public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; } = null!;
+        public ICollection<ProductToBuy> ProductsToBuy { get; set; } = null!;
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float ExcentValue { get; set; }
