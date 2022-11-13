@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "SaAJTnqqOCh2rTnPGm4Rr/ZFvIx/CZY4wJolvPTFvSQ=",
+  "Source": "SBAPI.API",
+  "BasePath": "_content/SBAPI.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

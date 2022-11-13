@@ -17,7 +17,7 @@ namespace SBAPI.Domain.Entities.ListSuppliers
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int SupplierId { get; set; }
-        public virtual Supplier Department { get; set; } = null!;
+        public virtual Supplier Supplier { get; set; } = null!;
         public int ProductId { get; set; }
         public virtual Product Product { get; set; } = null!;
     }

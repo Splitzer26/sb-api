@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Suppliers;
 using SBAPI.Domain.Entities.ProductsToBuy;
+using SBAPI.Domain.Entities.Users;
 
 namespace SBAPI.Domain.Entities.PurchaseOrders
 {
@@ -19,6 +20,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; } = null!;
         public ICollection<ProductToBuy> ProductsToBuy { get; set; } = null!;
+        [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float ExcentValue { get; set; }
@@ -28,13 +30,17 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public float TaxesValue { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float TotalCost { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "datetime")]
         public DateTime Date { get; set; }
         public int CreatedById { get; set; }
+
         public virtual User CreatedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int ModifiedById { get; set; }
+
         public virtual User ModifiedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
     }
 }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.PurchaseOrders;
 using SBAPI.Domain.Entities.Products;
 using SBAPI.Domain.Entities.Taxes;
+using SBAPI.Domain.Entities.Users;
 
 namespace SBAPI.Domain.Entities.ProductsToBuy
 {
@@ -21,19 +22,21 @@ namespace SBAPI.Domain.Entities.ProductsToBuy
         public int ProductId { get; set; }
         public virtual Product Product { get; set; } = null!;
         public int Quantity { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public float UnitCost { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float TaxesValue { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float TotalCost { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
         public int TaxId { get; set; }
         public virtual Tax Tax { get; set; } = null!;
         public int CreatedById { get; set; }
         public virtual User CreatedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int ModifiedById { get; set; }
         public virtual User ModifiedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
 
     }

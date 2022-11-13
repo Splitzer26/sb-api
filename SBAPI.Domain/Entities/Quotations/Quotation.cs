@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Clients;
 using SBAPI.Domain.Entities.ListedProducts;
+using SBAPI.Domain.Entities.Users;
 
 namespace SBAPI.Domain.Entities.Quotations
 {
@@ -23,6 +24,7 @@ namespace SBAPI.Domain.Entities.Quotations
         public int ClientId { get; set; }
         public virtual Client Client { get; set; } = null!;
         public ICollection<ListedProduct> ListedProducts { get; set; } = null!;
+        [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float ExcentValue { get; set; }
@@ -32,13 +34,15 @@ namespace SBAPI.Domain.Entities.Quotations
         public float TaxesValue { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float TotalCost { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "datetime")]
         public DateTime Date { get; set; }
         public int CreatedById { get; set; }
         public virtual User CreatedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int ModifiedById { get; set; }
         public virtual User ModifiedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
     }
 }

@@ -15,7 +15,6 @@ namespace SBAPI.Domain.Entities.BranchOffices
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int CompanyId { get; set; }
-        [ForeignKey("Id")]
         public virtual Business Company { get; set; } = null!;
         public string Name { get; set; } = null!;
         public string? PhoneNumber { get; set; }

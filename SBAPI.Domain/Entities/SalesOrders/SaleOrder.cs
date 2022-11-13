@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Clients;
 using SBAPI.Domain.Entities.ProductsToSale;
+using SBAPI.Domain.Entities.Users;
 
 namespace SBAPI.Domain.Entities.SalesOrders
 {
@@ -19,8 +20,10 @@ namespace SBAPI.Domain.Entities.SalesOrders
         public int Id { get; set; }
         public string Serie { get; set; } = null!;
         public int ClientId { get; set; }
-        public virtual Client Supplier { get; set; } = null!;
+        [ForeignKey("ClientId")]
+        public virtual Client Client { get; set; } = null!;
         public ICollection<ProductToSell> ProductsToSale { get; set; } = null!;
+        [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float ExcentValue { get; set; }
@@ -30,13 +33,17 @@ namespace SBAPI.Domain.Entities.SalesOrders
         public float TaxesValue { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float TotalCost { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "datetime")]
         public DateTime Date { get; set; }
         public int CreatedById { get; set; }
+        [ForeignKey("CreatedById")]
         public virtual User CreatedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int ModifiedById { get; set; }
+        [ForeignKey("ModifiedById")]
         public virtual User ModifiedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
     }
 }

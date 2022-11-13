@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Products;
 using SBAPI.Domain.Entities.Warehouses;
+using SBAPI.Domain.Entities.Users;
 
 namespace SBAPI.Domain.Entities.ProductsTransfer
 {
@@ -21,12 +22,17 @@ namespace SBAPI.Domain.Entities.ProductsTransfer
         public virtual Warehouse WarehouseFrom { get; set; } = null!;
         public int WarehouseToId { get; set; }
         public virtual Warehouse WarehouseTo { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime Date { get; set; }
+        [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int CreatedById { get; set; }
+
         public virtual User CreatedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
         public int ModifiedById { get; set; }
+
         public virtual User ModifiedBy { get; set; } = null!;
     }
 }

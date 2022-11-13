@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Clients;
 using SBAPI.Domain.Entities.SoldProducts;
 using SBAPI.Domain.Entities.CashRegisters;
+using SBAPI.Domain.Entities.Users;
 
 namespace SBAPI.Domain.Entities.Invoices
 {
@@ -26,6 +27,7 @@ namespace SBAPI.Domain.Entities.Invoices
         public int ClientId { get; set; }
         public virtual Client Client { get; set; } = null!;
         public ICollection<SoldProduct> SoldProducts { get; set; } = null!;
+        [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float ExcentValue { get; set; }
@@ -35,15 +37,15 @@ namespace SBAPI.Domain.Entities.Invoices
         public float TaxesValue { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public float TotalCost { get; set; }
-        [Column(TypeName = "decimal(18,2)")]
-        public DateTime Date { get; set; }
         [Column(TypeName ="datetime")]
+        public DateTime Date { get; set; }
         public int CreatedById { get; set; }
-        [Column(TypeName = "int")]
         public virtual User CreatedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int ModifiedById { get; set; }
         public virtual User ModifiedBy { get; set; } = null!;
+        [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
     }
 }

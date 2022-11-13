@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oK9qUlOLiXu3H6KXN9UrcXB3t7zHmKVAHC3Zxb7dRC7AIvPOupUrzbT0ab3iuyOkkXyGDytQUt4tM8Jm3yxk9w==",
+  "dgSpecHash": "T6tfpLcF3TAwSm/iJQoL203W2EEz9sqkAq/jzLYIrxuabp5c6T66JvrDGrUNT3Eo9ZuaPO3teC+OtCZQ5OrApw==",
   "success": true,
   "projectFilePath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.API\\SBAPI.API.csproj",
   "expectedPackageFiles": [
@@ -67,7 +67,6 @@
     "C:\\Users\\josec\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\system.runtime.caching\\5.0.0\\system.runtime.caching.5.0.0.nupkg.sha512",
-    "C:\\Users\\josec\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
     "C:\\Users\\josec\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",

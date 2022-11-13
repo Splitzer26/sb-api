@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Departments;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace SBAPI.Domain.Entities.Cities
 {

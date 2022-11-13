@@ -34,18 +34,427 @@ using SBAPI.Domain.Entities.TypesUnitOfMeasurements;
 using SBAPI.Domain.Entities.UnitOfMeasurements;
 using SBAPI.Domain.Entities.Users;
 using SBAPI.Domain.Entities.Warehouses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace SBAPI.Domain
 {
     public class SmartContext : DbContext
     {
         public SmartContext(DbContextOptions<SmartContext> options) : base(options)
+        { 
+        }
+        protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+           //BranchOffices
+            builder.Entity<BranchOffice>()
+                .HasOne(u => u.Company)
+                .WithMany()
+                .HasForeignKey(u => u.CompanyId)
+                .OnDelete(DeleteBehavior.Restrict);
+            //CashRegistrer
+            builder.Entity<CashRegister>()
+                .HasOne(u => u.BranchOffice)
+                .WithMany()
+                .HasForeignKey(u => u.BranchOfficeId)
+                .OnDelete(DeleteBehavior.Restrict);
+            //Cities
+            builder.Entity<City>()
+                .HasOne(u => u.Department)
+                .WithMany()
+                .HasForeignKey(u => u.DepartmentId)
+                .OnDelete(DeleteBehavior.Restrict);
+            //Client
+            builder.Entity<Client>()
+                .HasOne(u => u.ClientType)
+                .WithMany()
+                .HasForeignKey(u => u.ClientTypeId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Client>()
+                .HasOne(u => u.City)
+                .WithMany()
+                .HasForeignKey(u => u.CityId)
+                .OnDelete(DeleteBehavior.Restrict);
+            //Distribution Products
+            builder.Entity<DistributionProducts>()
+                .HasOne(u => u.Product)
+                .WithMany()
+                .HasForeignKey(u => u.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<DistributionProducts>()
+                .HasOne(u => u.Warehouse)
+                .WithMany()
+                .HasForeignKey(u => u.WarehouseId)
+                .OnDelete(DeleteBehavior.Restrict);
+            //Family Product
+            builder.Entity<FamilyProduct>()
+                .HasOne(u => u.SectionProduct)
+                .WithMany()
+                .HasForeignKey(u => u.SectionProductId)
+                .OnDelete(DeleteBehavior.Restrict);
+            //Invoice
+            builder.Entity<Invoice>()
+                .HasOne(u => u.CashRegister)
+                .WithMany()
+                .HasForeignKey(u => u.CashRegistrerId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Invoice>()
+                .HasOne(u => u.Client)
+                .WithMany()
+                .HasForeignKey(u => u.ClientId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Invoice>()
+               .HasOne(u => u.CreatedBy)
+               .WithMany()
+               .HasForeignKey(u => u.CreatedById)
+               .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Invoice>()
+               .HasOne(u => u.ModifiedBy)
+               .WithMany()
+               .HasForeignKey(u => u.ModifiedById)
+               .OnDelete(DeleteBehavior.Restrict);
+            //Listed Products
+            builder.Entity<ListedProduct>()
+               .HasOne(u => u.Quotation)
+               .WithMany()
+               .HasForeignKey(u => u.QuotationId)
+               .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ListedProduct>()
+              .HasOne(u => u.Product)
+              .WithMany()
+              .HasForeignKey(u => u.ProductId)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ListedProduct>()
+              .HasOne(u => u.Tax)
+              .WithMany()
+              .HasForeignKey(u => u.TaxId)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ListedProduct>()
+              .HasOne(u => u.CreatedBy)
+              .WithMany()
+              .HasForeignKey(u => u.CreatedById)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ListedProduct>()
+              .HasOne(u => u.ModifiedBy)
+              .WithMany()
+              .HasForeignKey(u => u.ModifiedById)
+              .OnDelete(DeleteBehavior.Restrict);
+            //List Suppliers
+            builder.Entity<ListSuppliers>()
+              .HasOne(u => u.Supplier)
+              .WithMany()
+              .HasForeignKey(u => u.SupplierId)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ListSuppliers>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            //Product Prices
+            builder.Entity<ProductPrices>()
+              .HasOne(u => u.Product)
+              .WithMany()
+              .HasForeignKey(u => u.ProductId)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductPrices>()
+             .HasOne(u => u.ClientType)
+             .WithMany()
+             .HasForeignKey(u => u.TypeClientId)
+             .OnDelete(DeleteBehavior.Restrict);
+            //Product
+            builder.Entity<Product>()
+              .HasOne(u => u.FamilyProduct)
+              .WithMany()
+              .HasForeignKey(u => u.FamilyProductId)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Product>()
+             .HasOne(u => u.RegularSupplier)
+             .WithMany()
+             .HasForeignKey(u => u.RegularSupplierId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Product>()
+              .HasOne(u => u.ProductStatus)
+              .WithMany()
+              .HasForeignKey(u => u.ProductStatusId)
+              .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Product>()
+             .HasOne(u => u.Tax)
+             .WithMany()
+             .HasForeignKey(u => u.TaxId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Product>()
+             .HasOne(u => u.UnitOfMeasurement)
+             .WithMany()
+             .HasForeignKey(u => u.UnitOfMeasurementId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Product>()
+             .HasOne(u => u.CreatedBy)
+             .WithMany()
+             .HasForeignKey(u => u.CreatedById)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Product>()
+             .HasOne(u => u.ModifiedBy)
+             .WithMany()
+             .HasForeignKey(u => u.ModifiedById)
+             .OnDelete(DeleteBehavior.Restrict);
+            //Product Inputs
+            builder.Entity<ProductInput>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductInput>()
+             .HasOne(u => u.Origin)
+             .WithMany()
+             .HasForeignKey(u => u.OriginId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductInput>()
+            .HasOne(u => u.Transfer)
+            .WithMany()
+            .HasForeignKey(u => u.TransferId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductInput>()
+            .HasOne(u => u.PurchaseOrder)
+            .WithMany()
+            .HasForeignKey(u => u.PurchaseOrderId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductInput>()
+            .HasOne(u => u.WarehouseDestiny)
+            .WithMany()
+            .HasForeignKey(u => u.WarehouseDestinyId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductInput>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductInput>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Product Output
+            builder.Entity<ProductOutput>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductOutput>()
+             .HasOne(u => u.Origin)
+             .WithMany()
+             .HasForeignKey(u => u.OriginId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductOutput>()
+            .HasOne(u => u.Transfer)
+            .WithMany()
+            .HasForeignKey(u => u.TransferId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductOutput>()
+            .HasOne(u => u.Invoice)
+            .WithMany()
+            .HasForeignKey(u => u.InvoiceId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductOutput>()
+            .HasOne(u => u.WarehouseFrom)
+            .WithMany()
+            .HasForeignKey(u => u.WarehouseFromId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductOutput>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductOutput>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Product To Buy
+            builder.Entity<ProductToBuy>()
+             .HasOne(u => u.PurchaseOrder)
+             .WithMany()
+             .HasForeignKey(u => u.PurchaseOrderId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToBuy>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToBuy>()
+            .HasOne(u => u.Tax)
+            .WithMany()
+            .HasForeignKey(u => u.TaxId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToBuy>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToBuy>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Product To Sell
+            builder.Entity<ProductToSell>()
+            .HasOne(u => u.SaleOrder)
+            .WithMany()
+            .HasForeignKey(u => u.SaleOrderId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToSell>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToSell>()
+            .HasOne(u => u.Tax)
+            .WithMany()
+            .HasForeignKey(u => u.TaxId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToSell>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductToSell>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Product Transfer
+            builder.Entity<ProductTransfer>()
+            .HasOne(u => u.WarehouseFrom)
+            .WithMany()
+            .HasForeignKey(u => u.WarehouseFromId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductTransfer>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductTransfer>()
+            .HasOne(u => u.WarehouseTo)
+            .WithMany()
+            .HasForeignKey(u => u.WarehouseToId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductTransfer>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductTransfer>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Purchase Order
+            builder.Entity<PurchaseOrder>()
+            .HasOne(u => u.Supplier)
+            .WithMany()
+            .HasForeignKey(u => u.SupplierId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<PurchaseOrder>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<PurchaseOrder>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Quotations
+            builder.Entity<Quotation>()
+            .HasOne(u => u.Client)
+            .WithMany()
+            .HasForeignKey(u => u.ClientId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Quotation>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Quotation>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Sale Order
+            builder.Entity<SaleOrder>()
+            .HasOne(u => u.Client)
+            .WithMany()
+            .HasForeignKey(u => u.ClientId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SaleOrder>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SaleOrder>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Sold Product
+            builder.Entity<SoldProduct>()
+           .HasOne(u => u.Invoice)
+           .WithMany()
+           .HasForeignKey(u => u.InvoiceId)
+           .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SoldProduct>()
+             .HasOne(u => u.Product)
+             .WithMany()
+             .HasForeignKey(u => u.ProductId)
+             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SoldProduct>()
+            .HasOne(u => u.Tax)
+            .WithMany()
+            .HasForeignKey(u => u.TaxId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SoldProduct>()
+            .HasOne(u => u.CreatedBy)
+            .WithMany()
+            .HasForeignKey(u => u.CreatedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SoldProduct>()
+            .HasOne(u => u.ModifiedBy)
+            .WithMany()
+            .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Supplier Bank Account
+            builder.Entity<SupplierBankAccount>()
+            .HasOne(u => u.Bank)
+            .WithMany()
+            .HasForeignKey(u => u.BankId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SupplierBankAccount>()
+            .HasOne(u => u.AccountType)
+            .WithMany()
+            .HasForeignKey(u => u.AccountTypeId)
+            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SupplierBankAccount>()
+           .HasOne(u => u.Supplier)
+           .WithMany()
+           .HasForeignKey(u => u.SupplierId)
+           .OnDelete(DeleteBehavior.Restrict);
+            //Unit of Measurement
+            builder.Entity<UnitOfMeasurement>()
+           .HasOne(u => u.TypeUnitOfMeasurement)
+           .WithMany()
+           .HasForeignKey(u => u.TypeUnitOfMeasurementId)
+           .OnDelete(DeleteBehavior.Restrict);
+            //User
+            builder.Entity<User>()
+           .HasOne(u => u.Rol)
+           .WithMany()
+           .HasForeignKey(u => u.RolId)
+           .OnDelete(DeleteBehavior.Restrict);
+            //Warehouse
+            builder.Entity<Warehouse>()
+           .HasOne(u => u.BranchOffice)
+           .WithMany()
+           .HasForeignKey(u => u.BranchOfficeId)
+           .OnDelete(DeleteBehavior.Restrict);
 
         }
         public DbSet<Bank> Branks { get; set; }

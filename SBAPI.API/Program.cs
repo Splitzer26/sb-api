@@ -4,20 +4,16 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using SBAPI.API.Errors;
 using SBAPI.API.Filters;
-using SBAPI.Application;
 using SBAPI.Domain;
 using SBAPI.Infraestructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
-    builder.Services
-    .AddApplication()
-    .AddInfraestructure(builder.Configuration);
+    //builder.Services
+    //.AddInfraestructure(builder.Configuration);
     builder.Services.AddControllers();
-    builder.Services.AddDbContext<SmartContext>(options => 
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"))
-                     );
-    builder.Services.AddSingleton<ProblemDetailsFactory, SBProblemDetailsFactory>();
+    builder.Services.AddDbContext<SmartContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
+   // builder.Services.AddSingleton<ProblemDetailsFactory, SBProblemDetailsFactory>();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 }
