@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.API\\SBAPI.API.csproj": {}
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.API\\SBAPI.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.API\\SBAPI.API.csproj": {
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.API\\SBAPI.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.API\\SBAPI.API.csproj",
+        "projectUniqueName": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.API\\SBAPI.API.csproj",
         "projectName": "SBAPI.API",
-        "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.API\\SBAPI.API.csproj",
+        "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.API\\SBAPI.API.csproj",
         "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.API\\obj\\",
+        "outputPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,24 +22,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj"
+              "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj"
               },
-              "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj": {
-                "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj"
-              },
-              "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj"
+              "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj": {
+                "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj"
               }
             }
           }
@@ -51,12 +48,34 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
-            "Newtonsoft.Json": {
+            "MediatR": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
@@ -90,18 +109,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj": {
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj",
+        "projectUniqueName": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj",
         "projectName": "SBAPI.Application",
-        "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj",
+        "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj",
         "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\obj\\",
+        "outputPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -112,18 +131,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj": {
-                "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj"
+              "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj"
               }
             }
           }
@@ -135,12 +154,44 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "Ardalis.Specification": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.1.0, )"
+            },
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.14.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.4.2, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -159,77 +210,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj": {
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj",
-        "projectName": "SBAPI.Contracts",
-        "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\SBAPI.Contracts.csproj",
-        "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Contracts\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\josec\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj",
         "projectName": "SBAPI.Domain",
-        "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\SBAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -240,15 +232,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -259,18 +251,24 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.10, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -289,18 +287,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj": {
+    "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj",
         "projectName": "SBAPI.Infraestructure",
-        "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj",
+        "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Infraestructure\\SBAPI.Infraestructure.csproj",
         "packagesPath": "C:\\Users\\josec\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Infraestructure\\obj\\",
+        "outputPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -311,18 +309,21 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj": {
-                "projectPath": "C:\\Users\\josec\\Desktop\\SB-API\\SBAPI\\SBAPI.Application\\SBAPI.Application.csproj"
+              "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj": {
+                "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Application\\SBAPI.Application.csproj"
+              },
+              "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\josec\\Documents\\repositorios personales\\sb-api\\SBAPI.Domain\\SBAPI.Domain.csproj"
               }
             }
           }
@@ -334,24 +335,28 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
+            "Ardalis.Specification.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[6.0.1, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
             },
             "Microsoft.Extensions.Options.ConfigurationExtensions": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[7.0.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[6.23.1, )"
+              "version": "[6.25.0, )"
             }
           },
           "imports": [
@@ -370,7 +375,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
