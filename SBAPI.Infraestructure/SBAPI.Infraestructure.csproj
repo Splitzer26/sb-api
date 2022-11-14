@@ -8,9 +8,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SBAPI.Application\SBAPI.Application.csproj" />
+    <ProjectReference Include="..\SBAPI.Domain\SBAPI.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="6.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
@@ -18,7 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Persistence\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
