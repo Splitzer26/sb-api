@@ -18,7 +18,7 @@ namespace SBAPI.Domain.Entities.SoldProducts
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int InvoiceId { get; set; }
 
         public virtual Invoice Invoice { get; set; } = null!;

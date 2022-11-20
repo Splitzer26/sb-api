@@ -20,7 +20,7 @@ namespace SBAPI.Domain.Entities.Invoices
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int CashRegistrerId { get; set; }
         public virtual CashRegister CashRegister { get; set; } = null!;
         public string Serie { get; set; } = null!;

@@ -42,7 +42,9 @@ namespace SBAPI.Application.Features.UserFeature.Commands.CreateUserCommand
             {
                 throw new ApiException($"Ya existe un usuario con el nombre {request.FirstName + " " + request.LastName}");
             }
+
             var newRecord = _mapper.Map<User>(request);
+
             newRecord.FirstName = request.FirstName;
             newRecord.LastName = request.LastName;
             newRecord.Password = request.Password;

@@ -15,7 +15,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Serie { get; set; } = null!;
         public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; } = null!;

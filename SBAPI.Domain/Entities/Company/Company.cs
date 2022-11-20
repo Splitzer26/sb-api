@@ -9,7 +9,7 @@ namespace SBAPI.Domain.Entities.Company
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Name { get; set; } = null!;
         public string TaxId { get; set; } = null!;
         public string PhoneNumber1 { get; set; } = null!;

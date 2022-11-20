@@ -13,7 +13,7 @@ namespace SBAPI.Domain.Entities.UnitOfMeasurements
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Name { get; set; } = null!;
         public string Abreviature { get; set; } = null!;
 

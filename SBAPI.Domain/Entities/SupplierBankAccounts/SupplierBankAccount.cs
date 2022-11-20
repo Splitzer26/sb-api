@@ -16,7 +16,7 @@ namespace SBAPI.Domain.Entities.SupplierBankAccounts
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Name { get; set; } = null!;
         public int BankId { get; set; }
         public virtual Bank Bank { get; set; } = null!;

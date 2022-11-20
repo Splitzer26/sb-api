@@ -19,7 +19,7 @@ namespace SBAPI.Domain.Entities.ProductsOutputs
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int ProductId { get; set; }
         [ForeignKey("ProductId")]
         public virtual Product Product { get; set; } = null!;
