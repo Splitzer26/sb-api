@@ -13,7 +13,7 @@ namespace SBAPI.Domain.Entities.Users
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string FirstName { get; set; } = null!;
         public string SecondName { get; set; } = null!;
         public string LastName { get; set; } = null!;
@@ -21,6 +21,6 @@ namespace SBAPI.Domain.Entities.Users
         public string Password { get; set; } = null!;
         public string PorfilePhoto { get; set; } = null!;
         public int RolId { get; set; }
-        public virtual Rol Rol { get; set; } = null!;
+        public virtual Rol? Rol { get; set; } = null!;
     }
 }

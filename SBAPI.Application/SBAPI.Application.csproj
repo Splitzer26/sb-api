@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\RolFeature\Commands\DeleteRolCommand\" />
     <Folder Include="Features\UserFeature\Queries\" />
-    <Folder Include="Mappings\" />
     <Folder Include="Parameters\" />
   </ItemGroup>
 

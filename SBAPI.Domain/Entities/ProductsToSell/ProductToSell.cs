@@ -19,7 +19,7 @@ namespace SBAPI.Domain.Entities.ProductsToSale
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int SaleOrderId { get; set; }
 
         public  virtual SaleOrder SaleOrder { get; set; } = null!;

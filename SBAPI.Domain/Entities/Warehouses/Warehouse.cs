@@ -13,7 +13,7 @@ namespace SBAPI.Domain.Entities.Warehouses
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int BranchOfficeId { get; set; }
         public virtual BranchOffice BranchOffice { get; set; } = null!;
         public string Code { get; set; } = null!;

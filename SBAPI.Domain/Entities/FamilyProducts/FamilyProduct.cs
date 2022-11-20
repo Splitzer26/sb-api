@@ -13,7 +13,7 @@ namespace SBAPI.Domain.Entities.FamilyProducts
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Name { get; set; } = null!;
         public int SectionProductId { get; set; }
         public virtual SectionProduct SectionProduct { get; set; } = null!; 

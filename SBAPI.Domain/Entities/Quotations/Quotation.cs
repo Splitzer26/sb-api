@@ -19,7 +19,7 @@ namespace SBAPI.Domain.Entities.Quotations
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Serie { get; set; } = null!;
         public int ClientId { get; set; }
         public virtual Client Client { get; set; } = null!;

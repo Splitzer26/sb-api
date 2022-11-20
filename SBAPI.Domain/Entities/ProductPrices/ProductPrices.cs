@@ -14,7 +14,7 @@ namespace SBAPI.Domain.Entities.ProductPrices
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int TypeClientId { get; set; }
         public virtual ClientType ClientType { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]

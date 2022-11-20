@@ -14,7 +14,7 @@ namespace SBAPI.Domain.Entities.Cities
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public string Name { get; set; } = null!;
         public int DepartmentId { get; set; }
         public virtual Department Department { get; set; } = null!;

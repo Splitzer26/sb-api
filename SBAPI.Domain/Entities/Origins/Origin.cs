@@ -9,7 +9,7 @@ namespace SBAPI.Domain.Entities.Origins
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int Name { get; set; }
         
     }

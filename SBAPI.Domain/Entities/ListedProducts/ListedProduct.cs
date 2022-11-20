@@ -18,7 +18,7 @@ namespace SBAPI.Domain.Entities.ListedProducts
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int QuotationId { get; set; }
 
         public virtual Quotation Quotation { get; set; } = null!;

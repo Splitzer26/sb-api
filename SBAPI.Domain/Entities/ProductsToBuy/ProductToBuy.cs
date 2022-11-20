@@ -16,7 +16,7 @@ namespace SBAPI.Domain.Entities.ProductsToBuy
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int Id { get; init; }
         public int PurchaseOrderId { get; set; }
         public PurchaseOrder PurchaseOrder { get; set; } = null!;
         public int ProductId { get; set; }
