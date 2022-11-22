@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.BranchOffices;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.Warehouses
 {
@@ -18,5 +19,7 @@ namespace SBAPI.Domain.Entities.Warehouses
         public virtual BranchOffice BranchOffice { get; set; } = null!;
         public string Code { get; set; } = null!;
         public string Name { get; set; } = null!;
+        public int StatusId { get; set; } 
+        public virtual Status Status { get; set; } = null!;
     }
 }

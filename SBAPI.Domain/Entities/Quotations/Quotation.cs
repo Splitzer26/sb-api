@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Clients;
 using SBAPI.Domain.Entities.ListedProducts;
 using SBAPI.Domain.Entities.Users;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.Quotations
 {
@@ -44,5 +45,7 @@ namespace SBAPI.Domain.Entities.Quotations
         public virtual User ModifiedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
+        public int StatusId { get; set; }
+        public virtual Status Status { get; set; } = null!;
     }
 }

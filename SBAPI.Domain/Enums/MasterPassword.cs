@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SBAPI.Application.Services.Interfaces
+namespace SBAPI.Domain.Enums
 {
-    public interface IJwtService
+    public enum MasterPassword
     {
-        public string GetSubjectToken();
+        TheBirdOfHermezIsMyNameAndEatMyWindsToMakeMeTame
     }
 }

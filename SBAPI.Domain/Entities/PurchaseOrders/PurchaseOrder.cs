@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Suppliers;
 using SBAPI.Domain.Entities.ProductsToBuy;
 using SBAPI.Domain.Entities.Users;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.PurchaseOrders
 {
@@ -42,5 +43,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public virtual User ModifiedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
+        public int StatusId { get; set; }
+        public virtual Status Status { get; set; } = null!;
     }
 }

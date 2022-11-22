@@ -30,6 +30,9 @@ namespace SBAPI.Domain.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -71,6 +74,9 @@ namespace SBAPI.Domain.Migrations
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ManagerEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -100,6 +106,9 @@ namespace SBAPI.Domain.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -136,6 +145,9 @@ namespace SBAPI.Domain.Migrations
 
                     b.Property<int?>("EndingSeries")
                         .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -345,6 +357,9 @@ namespace SBAPI.Domain.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -398,6 +413,9 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
@@ -416,6 +434,8 @@ namespace SBAPI.Domain.Migrations
                     b.HasIndex("CreatedById");
 
                     b.HasIndex("ModifiedById");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Invoices");
                 });
@@ -906,6 +926,9 @@ namespace SBAPI.Domain.Migrations
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<int>("WarehouseFromId")
                         .HasColumnType("int");
 
@@ -919,6 +942,8 @@ namespace SBAPI.Domain.Migrations
                     b.HasIndex("ModifiedById");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("StatusId");
 
                     b.HasIndex("WarehouseFromId");
 
@@ -960,6 +985,9 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
@@ -977,6 +1005,8 @@ namespace SBAPI.Domain.Migrations
                     b.HasIndex("CreatedById");
 
                     b.HasIndex("ModifiedById");
+
+                    b.HasIndex("StatusId");
 
                     b.HasIndex("SupplierId");
 
@@ -1019,6 +1049,9 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
@@ -1035,6 +1068,8 @@ namespace SBAPI.Domain.Migrations
                     b.HasIndex("CreatedById");
 
                     b.HasIndex("ModifiedById");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Quotations");
                 });
@@ -1092,6 +1127,9 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
@@ -1108,6 +1146,8 @@ namespace SBAPI.Domain.Migrations
                     b.HasIndex("CreatedById");
 
                     b.HasIndex("ModifiedById");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("SalesOrder");
                 });
@@ -1188,6 +1228,36 @@ namespace SBAPI.Domain.Migrations
                     b.HasIndex("TaxId");
 
                     b.ToTable("SoldProducts");
+                });
+
+            modelBuilder.Entity("SBAPI.Domain.Entities.Statuses.Status", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TypeStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TypeStatusId1")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TypeStatusId");
+
+                    b.HasIndex("TypeStatusId1");
+
+                    b.ToTable("Status");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.SupplierBankAccounts.SupplierBankAccount", b =>
@@ -1280,6 +1350,9 @@ namespace SBAPI.Domain.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1290,6 +1363,26 @@ namespace SBAPI.Domain.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Tax");
+                });
+
+            modelBuilder.Entity("SBAPI.Domain.Entities.TypeStatuses.TypeStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TypeStatuses");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.TypesUnitOfMeasurements.TypeUnitOfMeasurement", b =>
@@ -1343,6 +1436,10 @@ namespace SBAPI.Domain.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1351,12 +1448,23 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<byte[]>("MasterPasswordHash")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("MasterPasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("PorfilePhoto")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("RolId")
@@ -1366,6 +1474,9 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -1373,6 +1484,8 @@ namespace SBAPI.Domain.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("RolId");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Users");
                 });
@@ -1396,9 +1509,14 @@ namespace SBAPI.Domain.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BranchOfficeId");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("Warehouses");
                 });
@@ -1515,6 +1633,12 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("CashRegister");
 
                     b.Navigation("Client");
@@ -1522,6 +1646,8 @@ namespace SBAPI.Domain.Migrations
                     b.Navigation("CreatedBy");
 
                     b.Navigation("ModifiedBy");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.ListSuppliers.ListSuppliers", b =>
@@ -1896,6 +2022,12 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("SBAPI.Domain.Entities.Warehouses.Warehouse", "WarehouseFrom")
                         .WithMany()
                         .HasForeignKey("WarehouseFromId")
@@ -1913,6 +2045,8 @@ namespace SBAPI.Domain.Migrations
                     b.Navigation("ModifiedBy");
 
                     b.Navigation("Product");
+
+                    b.Navigation("Status");
 
                     b.Navigation("WarehouseFrom");
 
@@ -1933,6 +2067,12 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("SBAPI.Domain.Entities.Suppliers.Supplier", "Supplier")
                         .WithMany()
                         .HasForeignKey("SupplierId")
@@ -1942,6 +2082,8 @@ namespace SBAPI.Domain.Migrations
                     b.Navigation("CreatedBy");
 
                     b.Navigation("ModifiedBy");
+
+                    b.Navigation("Status");
 
                     b.Navigation("Supplier");
                 });
@@ -1966,11 +2108,19 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Client");
 
                     b.Navigation("CreatedBy");
 
                     b.Navigation("ModifiedBy");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.SalesOrders.SaleOrder", b =>
@@ -1993,11 +2143,19 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Client");
 
                     b.Navigation("CreatedBy");
 
                     b.Navigation("ModifiedBy");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.SoldProducts.SoldProduct", b =>
@@ -2045,6 +2203,21 @@ namespace SBAPI.Domain.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Tax");
+                });
+
+            modelBuilder.Entity("SBAPI.Domain.Entities.Statuses.Status", b =>
+                {
+                    b.HasOne("SBAPI.Domain.Entities.TypeStatuses.TypeStatus", "TypeStatus")
+                        .WithMany()
+                        .HasForeignKey("TypeStatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SBAPI.Domain.Entities.TypeStatuses.TypeStatus", null)
+                        .WithMany("Status")
+                        .HasForeignKey("TypeStatusId1");
+
+                    b.Navigation("TypeStatus");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.SupplierBankAccounts.SupplierBankAccount", b =>
@@ -2100,7 +2273,15 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("Rol");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.Warehouses.Warehouse", b =>
@@ -2111,7 +2292,15 @@ namespace SBAPI.Domain.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("SBAPI.Domain.Entities.Statuses.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.Navigation("BranchOffice");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("SBAPI.Domain.Entities.Departments.Department", b =>
@@ -2142,6 +2331,11 @@ namespace SBAPI.Domain.Migrations
             modelBuilder.Entity("SBAPI.Domain.Entities.SalesOrders.SaleOrder", b =>
                 {
                     b.Navigation("ProductsToSale");
+                });
+
+            modelBuilder.Entity("SBAPI.Domain.Entities.TypeStatuses.TypeStatus", b =>
+                {
+                    b.Navigation("Status");
                 });
 #pragma warning restore 612, 618
         }

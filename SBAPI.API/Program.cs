@@ -51,7 +51,6 @@ builder.Services.AddTransient(typeof(IRepositoryAsync<>), typeof(CustomRepositor
 
 var app = builder.Build();
 {
-    //app.UseExceptionHandler("/error");
     app.UseHttpsRedirection();
     app.MapControllers();
     if (app.Environment.IsDevelopment())
@@ -64,13 +63,10 @@ var app = builder.Build();
     .AllowAnyMethod()
     .AllowAnyHeader());
      app.UseErrorHandlingMiddleware();
+    app.UseAuthentication();
+    app.UseAuthorization();
 }
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var dataContext = scope.ServiceProvider.GetRequiredService<SmartContext>();
-//    dataContext.Database.Migrate();
-//}
 
 app.Run();
 // Configure the HTTP request pipeline.

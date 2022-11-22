@@ -24,6 +24,7 @@ namespace SBAPI.Domain.Entities.CashRegisters
         public int? CurrentSeries { get; set; }
         public int? AvalibleSeries { get; set; }
         public string? CAI { get; set; }
+        public bool IsActive { get; set; }
 
     }
 }

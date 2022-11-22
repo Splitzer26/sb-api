@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Products;
 using SBAPI.Domain.Entities.Warehouses;
 using SBAPI.Domain.Entities.Users;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.ProductsTransfer
 {
@@ -27,12 +28,12 @@ namespace SBAPI.Domain.Entities.ProductsTransfer
         [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
         public int CreatedById { get; set; }
-
         public virtual User CreatedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
         public int ModifiedById { get; set; }
-
         public virtual User ModifiedBy { get; set; } = null!;
+        public int StatusId { get; set; }
+        public virtual Status Status { get; set; } = null!;
     }
 }
