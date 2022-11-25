@@ -13,5 +13,6 @@ namespace SBAPI.Application.DTOs.Status
         public string Name { get; set; } = null!;
         public int TypeStatusId { get; set; }
         public TypeStatusDto TypeStatus { get; set; } = null!;
+
     }
 }

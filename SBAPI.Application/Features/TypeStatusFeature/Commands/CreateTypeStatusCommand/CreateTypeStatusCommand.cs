@@ -21,8 +21,8 @@ namespace SBAPI.Application.Features.TypeStatusFeature.Commands.CreateTypeStatus
     }
     public class CreateTypeStatusCommandHandler : IRequestHandler<CreateTypeStatusCommand, Response<TypeStatusDto>>
     {
-        private IMapper _mapper;
-        private IRepositoryAsync<TypeStatus> _repositoryAsync;
+        private readonly IMapper _mapper;
+        private readonly IRepositoryAsync<TypeStatus> _repositoryAsync;
         public CreateTypeStatusCommandHandler(IMapper mapper, IRepositoryAsync<TypeStatus> repositoryAsync)
         {
             _mapper = mapper;

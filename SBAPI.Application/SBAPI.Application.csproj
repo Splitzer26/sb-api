@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\StatusFeature\Queries\" />
     <Folder Include="Features\UserFeature\Commands\UpdateUserCommand\" />
     <Folder Include="Features\UserFeature\Queries\" />
     <Folder Include="Parameters\" />
