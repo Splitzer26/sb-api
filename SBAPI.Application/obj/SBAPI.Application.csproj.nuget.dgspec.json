@@ -66,15 +66,15 @@
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.3.0, )"
+              "version": "[11.4.0, )"
             },
             "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[11.3.0, )"
+              "version": "[11.4.0, )"
             },
             "MailKit": {
               "target": "Package",
-              "version": "[3.4.2, )"
+              "version": "[3.4.3, )"
             },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",

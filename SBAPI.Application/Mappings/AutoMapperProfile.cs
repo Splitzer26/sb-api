@@ -1,12 +1,15 @@
 ﻿using AutoMapper;
+using SBAPI.Application.DTOs.Bank;
 using SBAPI.Application.DTOs.Rol;
 using SBAPI.Application.DTOs.Status;
 using SBAPI.Application.DTOs.TypeStatus;
 using SBAPI.Application.DTOs.User;
+using SBAPI.Application.Features.BankFeature.Commands.CreateBankCommand;
 using SBAPI.Application.Features.RolFeature.Commands.CreateRolCommand;
 using SBAPI.Application.Features.StatusFeature.Commands.CreateStatusCommand;
 using SBAPI.Application.Features.TypeStatusFeature.Commands.CreateTypeStatusCommand;
 using SBAPI.Application.Features.UserFeature.Commands.CreateUserCommand;
+using SBAPI.Domain.Entities.Banks;
 using SBAPI.Domain.Entities.Roles;
 using SBAPI.Domain.Entities.Statuses;
 using SBAPI.Domain.Entities.TypeStatuses;
@@ -28,12 +31,14 @@ namespace SBAPI.Application.Mappings
             CreateMap<Rol, RolDto>();
             CreateMap<TypeStatus, TypeStatusDto>();
             CreateMap<Status, StatusDto>();
+            CreateMap<Bank, BankDto>();
             #endregion
             #region Commands
             CreateMap<CreateUserCommand, User>();
             CreateMap<CreateRolCommand, Rol>();
             CreateMap<CreateTypeStatusCommand, TypeStatus>();
             CreateMap<CreateStatusCommand, Status>();
+            CreateMap<CreateBankCommand, Bank>();
             #endregion
         }
     }
