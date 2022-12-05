@@ -29,7 +29,7 @@ namespace SBAPI.Domain.Entities.Products
         public virtual FamilyProduct FamilyProduct { get; set; } = null!;
         public int RegularSupplierId { get; set; }
         public virtual Supplier RegularSupplier { get; set; } = null!;
-        public ICollection<Supplier>? OtherSuppliers { get; set; }
+        public List<Supplier>? OtherSuppliers { get; set; }
         public int TaxId { get; set; }
         public Tax Tax { get; set; } = null!;
         public int ProductStatusId { get; set; }

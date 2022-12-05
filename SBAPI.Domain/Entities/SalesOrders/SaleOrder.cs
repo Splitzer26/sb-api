@@ -23,7 +23,7 @@ namespace SBAPI.Domain.Entities.SalesOrders
         public int ClientId { get; set; }
         [ForeignKey("ClientId")]
         public virtual Client Client { get; set; } = null!;
-        public ICollection<ProductToSell> ProductsToSale { get; set; } = null!;
+        public List<ProductToSell> ProductsToSale { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]

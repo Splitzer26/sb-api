@@ -20,7 +20,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public string Serie { get; set; } = null!;
         public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; } = null!;
-        public ICollection<ProductToBuy> ProductsToBuy { get; set; } = null!;
+        public List<ProductToBuy> ProductsToBuy { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]

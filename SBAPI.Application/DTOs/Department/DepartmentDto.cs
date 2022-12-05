@@ -11,6 +11,6 @@ namespace SBAPI.Application.DTOs.Department
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public ICollection<CityDto>? Cities { get; set; }
+        public List<CityDto>? Cities { get; set; }
     }
 }

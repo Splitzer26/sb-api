@@ -24,7 +24,7 @@ namespace SBAPI.Domain.Entities.Quotations
         public string Serie { get; set; } = null!;
         public int ClientId { get; set; }
         public virtual Client Client { get; set; } = null!;
-        public ICollection<ListedProduct> ListedProducts { get; set; } = null!;
+        public List<ListedProduct> ListedProducts { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]

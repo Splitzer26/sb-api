@@ -3,6 +3,8 @@ using MediatR;
 using SBAPI.Application.DTOs.Brand;
 using SBAPI.Application.DTOs.Department;
 using SBAPI.Application.Repository;
+using SBAPI.Application.Specifications.CitySpecification;
+using SBAPI.Application.Specifications.DepartmentSpecification;
 using SBAPI.Application.Wrappers;
 using SBAPI.Domain.Entities.Brand;
 using SBAPI.Domain.Entities.Departments;
@@ -29,7 +31,7 @@ namespace SBAPI.Application.Features.DepartmentFeature.Queries
         }
         public async Task<Response<DepartmentDto>> Handle(GetDepartmentByIdQuery request, CancellationToken cancellationToken)
         {
-            var department = await _repositoryAsync.GetByIdAsync(request.Id);
+            var department = await _repositoryAsync.FirstOrDefaultAsync(new DepartmentIncludesSpecification(id: request.Id));
             if (department != null)
             {
                 var dto = _mapper.Map<DepartmentDto>(department);
