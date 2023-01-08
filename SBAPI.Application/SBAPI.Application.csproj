@@ -7,7 +7,6 @@
   <ItemGroup>
     <ProjectReference Include="..\SBAPI.Domain\SBAPI.Domain.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Ardalis.Specification" Version="6.1.0" />
     <PackageReference Include="AutoMapper" Version="12.0.0" />
@@ -17,14 +16,12 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
     <PackageReference Include="MailKit" Version="3.4.3" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="Features\CompanyFeature\Queries\" />
     <Folder Include="Features\UserFeature\Commands\UpdateUserCommand\" />
     <Folder Include="Features\UserFeature\Queries\" />
     <Folder Include="Parameters\" />
   </ItemGroup>
-
 </Project>

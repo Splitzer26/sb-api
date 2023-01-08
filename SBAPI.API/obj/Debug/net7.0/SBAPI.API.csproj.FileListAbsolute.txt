@@ -1,3 +1,9 @@
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.csproj.AssemblyReference.cache
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.AssemblyInfoInputs.cache
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.AssemblyInfo.cs
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.csproj.CoreCompileInputs.cache
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7.0\appsettings.json
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7.0\SBAPI.API.exe
@@ -75,13 +81,6 @@ C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7.0\SBAPI.Application.pdb
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7.0\SBAPI.Infraestructure.pdb
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\bin\Debug\net7.0\SBAPI.Domain.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.csproj.AssemblyReference.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.AssemblyInfoInputs.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.AssemblyInfo.cs
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.csproj.CoreCompileInputs.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\staticwebassets\msbuild.SBAPI.API.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\staticwebassets\msbuild.build.SBAPI.API.props
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.SBAPI.API.props
