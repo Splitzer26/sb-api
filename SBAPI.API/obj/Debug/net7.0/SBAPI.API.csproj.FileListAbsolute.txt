@@ -95,3 +95,4 @@ C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.pdb
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.genruntimeconfig.cache
 C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\ref\SBAPI.API.dll
+C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.API\obj\Debug\net7.0\SBAPI.API.MvcApplicationPartsAssemblyInfo.cs

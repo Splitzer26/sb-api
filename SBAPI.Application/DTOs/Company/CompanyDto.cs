@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SBAPI.Application.DTOs.BranchOffice;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,6 @@ namespace SBAPI.Application.DTOs.Company
         public string Email { get; set; } = null!; 
         public string? WebSite { get; set; } 
         public string LogoType { get; set; } = null!;
+        public List<BranchOfficeDto>? BranchOffices { get; set; }
     }
 }
