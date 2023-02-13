@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Company;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.BranchOffices
 {
@@ -20,6 +21,9 @@ namespace SBAPI.Domain.Entities.BranchOffices
         public string? PhoneNumber { get; set; }
         public string ManagerName { get; set; } = string.Empty!;
         public string ManagerEmail { get; set; } = string.Empty!;
+        public decimal Lat { get; set; }
+        public decimal Lng { get; set; }
         public string Address { get; set; } = string.Empty!;
+        public bool IsActive { get; set; }
     }
 }

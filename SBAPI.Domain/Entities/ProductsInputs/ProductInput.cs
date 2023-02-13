@@ -28,7 +28,6 @@ namespace SBAPI.Domain.Entities.ProductsInputs
         [Column(TypeName = "datetime")]
         public DateTime Date { get; set; }
         public int CreatedById { get; set; }
-
         public virtual User CreatedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime CreatedOn { get; set; }
@@ -36,5 +35,6 @@ namespace SBAPI.Domain.Entities.ProductsInputs
         public virtual User ModifiedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
+
     }
 }

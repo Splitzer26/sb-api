@@ -15,7 +15,7 @@ namespace SBAPI.Application.Specifications.UserSpecification
             if(id != null)
                 Query.Where(a=>a.UserName == filter || a.FirstName + " " + a.LastName == filter && a.Id != id);
             else
-                Query.Where(a => a.UserName == filter || a.FirstName + " " + a.LastName == filter);
+                Query.Where(a => a.UserName == filter || a.FirstName + " " + a.LastName == filter||a.Email == filter);
         }
     }
 }

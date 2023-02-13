@@ -1,15 +1,9 @@
 ﻿using SBAPI.Domain.Entities.Origins;
 using SBAPI.Domain.Entities.Products;
 using SBAPI.Domain.Entities.ProductsTransfer;
-using SBAPI.Domain.Entities.PurchaseOrders;
 using SBAPI.Domain.Entities.Warehouses;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Invoices;
 using SBAPI.Domain.Entities.Users;
 

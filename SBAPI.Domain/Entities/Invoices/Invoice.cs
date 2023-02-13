@@ -12,6 +12,7 @@ using SBAPI.Domain.Entities.Clients;
 using SBAPI.Domain.Entities.SoldProducts;
 using SBAPI.Domain.Entities.CashRegisters;
 using SBAPI.Domain.Entities.Users;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.Invoices
 {
@@ -26,7 +27,7 @@ namespace SBAPI.Domain.Entities.Invoices
         public string Serie { get; set; } = null!;
         public int ClientId { get; set; }
         public virtual Client Client { get; set; } = null!;
-        public ICollection<SoldProduct> SoldProducts { get; set; } = null!;
+        public List<SoldProduct> SoldProducts { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
@@ -47,5 +48,7 @@ namespace SBAPI.Domain.Entities.Invoices
         public virtual User ModifiedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
+        public int StatusId { get; set; }
+        public virtual Status Status { get; set; } = null!;
     }
 }

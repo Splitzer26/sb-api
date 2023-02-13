@@ -16,5 +16,6 @@ namespace SBAPI.Domain.Entities.Taxes
         public int Id { get; init; }
         public string Name { get; set; } = null!;
         public float Rate { get; set; }
+        public bool IsActive { get; set; }
     }
 }

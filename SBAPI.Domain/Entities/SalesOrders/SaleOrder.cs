@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Clients;
 using SBAPI.Domain.Entities.ProductsToSale;
 using SBAPI.Domain.Entities.Users;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.SalesOrders
 {
@@ -22,7 +23,7 @@ namespace SBAPI.Domain.Entities.SalesOrders
         public int ClientId { get; set; }
         [ForeignKey("ClientId")]
         public virtual Client Client { get; set; } = null!;
-        public ICollection<ProductToSell> ProductsToSale { get; set; } = null!;
+        public List<ProductToSell> ProductsToSale { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
@@ -45,5 +46,7 @@ namespace SBAPI.Domain.Entities.SalesOrders
         public virtual User ModifiedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
+        public int StatusId { get; set; }
+        public virtual Status Status { get; set; } = null!;
     }
 }

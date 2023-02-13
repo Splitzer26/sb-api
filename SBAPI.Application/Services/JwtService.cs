@@ -2,14 +2,10 @@
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using SBAPI.Application.Exceptions;
-using SBAPI.Application.Services.Interfaces;
 using SBAPI.Domain.Settings;
-using System;
-using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace SBAPI.Application.Services
 {

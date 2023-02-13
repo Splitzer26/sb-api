@@ -14,6 +14,7 @@ namespace SBAPI.Application.DTOs.User
         public string SecondName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public string UserName { get; set; } = null!;
+        public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
         public string PorfilePhoto { get; set; } = null!;
         public int RolId { get; set; }

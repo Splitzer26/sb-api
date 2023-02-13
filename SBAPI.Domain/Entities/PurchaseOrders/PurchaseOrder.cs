@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SBAPI.Domain.Entities.Suppliers;
 using SBAPI.Domain.Entities.ProductsToBuy;
 using SBAPI.Domain.Entities.Users;
+using SBAPI.Domain.Entities.Statuses;
 
 namespace SBAPI.Domain.Entities.PurchaseOrders
 {
@@ -19,7 +20,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public string Serie { get; set; } = null!;
         public int SupplierId { get; set; }
         public virtual Supplier Supplier { get; set; } = null!;
-        public ICollection<ProductToBuy> ProductsToBuy { get; set; } = null!;
+        public List<ProductToBuy> ProductsToBuy { get; set; } = null!;
         [Column(TypeName = "decimal(18,2)")]
         public float Discount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
@@ -42,5 +43,7 @@ namespace SBAPI.Domain.Entities.PurchaseOrders
         public virtual User ModifiedBy { get; set; } = null!;
         [Column(TypeName = "datetime")]
         public DateTime ModifiedOn { get; set; }
+        public int StatusId { get; set; }
+        public virtual Status Status { get; set; } = null!;
     }
 }

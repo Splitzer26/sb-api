@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SBAPI.Application.Features.RolFeature.Commands.CreateRolCommand;
+using SBAPI.Application.Features.RolFeature.Commands.DeleteRolCommand;
 using SBAPI.Application.Features.RolFeature.Commands.UpdateRolCommand;
 using SBAPI.Application.Features.RolFeature.Queries;
 
@@ -38,11 +39,11 @@ namespace SBAPI.API.Controllers.v1
             return Ok(await Mediator.Send(command));
         }
 
-        //[HttpDelete("Delete/{id}")]
-        //public async Task<IActionResult> Delete(int id)
-        //{
-        //    return Ok(await Mediator.Send(new DeleteRolCommand { Id = id }));
-        //}
+        [HttpDelete("Delete/{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            return Ok(await Mediator.Send(new DeleteRolCommand { Id = id }));
+        }
 
     }
 }

@@ -5,9 +5,7 @@ using SBAPI.Application;
 using SBAPI.Application.Repository;
 using SBAPI.Domain;
 using SBAPI.Infraestructure.Repository;
-using SBAPI.Infraestructure;
-using System.Reflection;
-
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 {
@@ -18,6 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
     //builder.Services.AddDbContext<SmartContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection")));
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddApplicationLayer(builder.Configuration);
+    builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
     builder.Services.AddApiVersioningExtension();
     builder.Services.AddSwaggerGen(options =>
     {
@@ -51,7 +50,6 @@ builder.Services.AddTransient(typeof(IRepositoryAsync<>), typeof(CustomRepositor
 
 var app = builder.Build();
 {
-    //app.UseExceptionHandler("/error");
     app.UseHttpsRedirection();
     app.MapControllers();
     if (app.Environment.IsDevelopment())
@@ -63,14 +61,11 @@ var app = builder.Build();
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader());
-     app.UseErrorHandlingMiddleware();
+    app.UseErrorHandlingMiddleware();
+    app.UseAuthentication();
+    app.UseAuthorization();
 }
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var dataContext = scope.ServiceProvider.GetRequiredService<SmartContext>();
-//    dataContext.Database.Migrate();
-//}
 
 app.Run();
 // Configure the HTTP request pipeline.

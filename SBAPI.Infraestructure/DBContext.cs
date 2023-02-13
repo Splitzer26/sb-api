@@ -29,12 +29,13 @@ using SBAPI.Domain.Entities.Roles;
 using SBAPI.Domain.Entities.SalesOrders;
 using SBAPI.Domain.Entities.SectionsProduct;
 using SBAPI.Domain.Entities.SoldProducts;
+using SBAPI.Domain.Entities.Statuses;
 using SBAPI.Domain.Entities.SupplierBankAccounts;
+using SBAPI.Domain.Entities.TypeStatuses;
 using SBAPI.Domain.Entities.TypesUnitOfMeasurements;
 using SBAPI.Domain.Entities.UnitOfMeasurements;
 using SBAPI.Domain.Entities.Users;
 using SBAPI.Domain.Entities.Warehouses;
-using System.Runtime.CompilerServices;
 
 namespace SBAPI.Domain
 {
@@ -113,6 +114,11 @@ namespace SBAPI.Domain
                .WithMany()
                .HasForeignKey(u => u.ModifiedById)
                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Invoice>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u => u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
             //Listed Products
             builder.Entity<ListedProduct>()
                .HasOne(u => u.Quotation)
@@ -347,6 +353,11 @@ namespace SBAPI.Domain
             .WithMany()
             .HasForeignKey(u => u.ModifiedById)
             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<ProductTransfer>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u => u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
             //Purchase Order
             builder.Entity<PurchaseOrder>()
             .HasOne(u => u.Supplier)
@@ -363,6 +374,11 @@ namespace SBAPI.Domain
             .WithMany()
             .HasForeignKey(u => u.ModifiedById)
             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<PurchaseOrder>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u => u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
             //Quotations
             builder.Entity<Quotation>()
             .HasOne(u => u.Client)
@@ -379,6 +395,11 @@ namespace SBAPI.Domain
             .WithMany()
             .HasForeignKey(u => u.ModifiedById)
             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Quotation>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u => u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
             //Sale Order
             builder.Entity<SaleOrder>()
             .HasOne(u => u.Client)
@@ -395,6 +416,11 @@ namespace SBAPI.Domain
             .WithMany()
             .HasForeignKey(u => u.ModifiedById)
             .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<SaleOrder>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u => u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
             //Sold Product
             builder.Entity<SoldProduct>()
            .HasOne(u => u.Invoice)
@@ -420,6 +446,12 @@ namespace SBAPI.Domain
             .HasOne(u => u.ModifiedBy)
             .WithMany()
             .HasForeignKey(u => u.ModifiedById)
+            .OnDelete(DeleteBehavior.Restrict);
+            //Statuses
+            builder.Entity<Status>()
+            .HasOne(u => u.TypeStatus)
+            .WithMany()
+            .HasForeignKey(u => u.TypeStatusId)
             .OnDelete(DeleteBehavior.Restrict);
             //Supplier Bank Account
             builder.Entity<SupplierBankAccount>()
@@ -449,12 +481,22 @@ namespace SBAPI.Domain
            .WithMany()
            .HasForeignKey(u => u.RolId)
            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<User>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u => u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
             //Warehouse
             builder.Entity<Warehouse>()
            .HasOne(u => u.BranchOffice)
            .WithMany()
            .HasForeignKey(u => u.BranchOfficeId)
            .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Warehouse>()
+                .HasOne(u => u.Status)
+                .WithMany()
+                .HasForeignKey(u=>u.StatusId)
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
         public DbSet<Bank> Branks { get; set; }
@@ -486,8 +528,10 @@ namespace SBAPI.Domain
         public DbSet<SaleOrder> SalesOrder { get; set; }
         public DbSet<SectionProduct> SectionsProducts { get; set; }
         public DbSet<SoldProduct> SoldProducts { get; set; }
+        public DbSet<Status> Status { get; set; }
         public DbSet<SupplierBankAccount> SupplierBankAccounts { get; set; }
         public DbSet<TypeBankAccount> TypeBankAccount { get; set; }
+        public DbSet<TypeStatus> TypeStatuses { get; set; }
         public DbSet<TypeUnitOfMeasurement> TypeUnitOfMeasurements { get; set; }
         public DbSet<UnitOfMeasurement> UnitOfMeasurements { get; set; }
         public DbSet<User> Users { get; set; }
