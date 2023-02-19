@@ -1,17 +1,34 @@
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.csproj.AssemblyReference.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.AssemblyInfoInputs.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.AssemblyInfo.cs
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.csproj.CoreCompileInputs.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Infraestructure.deps.json
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Infraestructure.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Infraestructure.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Application.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Domain.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Application.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\bin\Debug\net7.0\SBAPI.Domain.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.csproj.CopyComplete
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\refint\SBAPI.Infraestructure.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\SBAPI.Infraestructure.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\obj\Debug\net7.0\ref\SBAPI.Infraestructure.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.csproj.AssemblyReference.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.AssemblyInfoInputs.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.AssemblyInfo.cs
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.csproj.CoreCompileInputs.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Infraestructure.deps.json
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Infraestructure.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Infraestructure.pdb
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Application.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Domain.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Application.pdb
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Domain.pdb
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.csproj.CopyComplete
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/refint/SBAPI.Infraestructure.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.pdb
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/ref/SBAPI.Infraestructure.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Infraestructure.deps.json
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Infraestructure.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Infraestructure.pdb
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Application.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Domain.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Application.pdb
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/bin/Debug/net7.0/SBAPI.Domain.pdb
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.csproj.AssemblyReference.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.AssemblyInfoInputs.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.AssemblyInfo.cs
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.csproj.CoreCompileInputs.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.csproj.CopyComplete
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/refint/SBAPI.Infraestructure.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/SBAPI.Infraestructure.pdb
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/obj/Debug/net7.0/ref/SBAPI.Infraestructure.dll

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SBAPI.Application.DTOs.Bank;
+using SBAPI.Application.DTOs.BranchOffice;
 using SBAPI.Application.DTOs.Brand;
 using SBAPI.Application.DTOs.City;
 using SBAPI.Application.DTOs.ClientType;
@@ -10,6 +11,7 @@ using SBAPI.Application.DTOs.Status;
 using SBAPI.Application.DTOs.TypeStatus;
 using SBAPI.Application.DTOs.User;
 using SBAPI.Application.Features.BankFeature.Commands.CreateBankCommand;
+using SBAPI.Application.Features.BranchOfficeFeature.Commands.CreateBranchOfficeCommand;
 using SBAPI.Application.Features.BrandFeature.Commands.CreateBrandCommand;
 using SBAPI.Application.Features.CityFeature.Commands.CreateCityCommand;
 using SBAPI.Application.Features.ClientTypeFeature.Commands.CreateClientTypeCommand;
@@ -20,6 +22,7 @@ using SBAPI.Application.Features.StatusFeature.Commands.CreateStatusCommand;
 using SBAPI.Application.Features.TypeStatusFeature.Commands.CreateTypeStatusCommand;
 using SBAPI.Application.Features.UserFeature.Commands.CreateUserCommand;
 using SBAPI.Domain.Entities.Banks;
+using SBAPI.Domain.Entities.BranchOffices;
 using SBAPI.Domain.Entities.Brand;
 using SBAPI.Domain.Entities.Cities;
 using SBAPI.Domain.Entities.ClientTypes;
@@ -48,6 +51,7 @@ namespace SBAPI.Application.Mappings
             CreateMap<Department, DepartmentDto>();
             CreateMap<City, CityDto>();
             CreateMap<Business, CompanyDto>();
+            CreateMap<BranchOffice, BranchOfficeDto>();
             #endregion
             #region Commands
             CreateMap<CreateUserCommand, User>();
@@ -60,6 +64,7 @@ namespace SBAPI.Application.Mappings
             CreateMap<CreateDepartmentCommand, Department>();
             CreateMap<CreateCityCommand,City>();
             CreateMap<CreateCompanyCommand,Business>();
+            CreateMap<CreateBranchOfficeCommand, BranchOffice>();
             #endregion
         }
     }

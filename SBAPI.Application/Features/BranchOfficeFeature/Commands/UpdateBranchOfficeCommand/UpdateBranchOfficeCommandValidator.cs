@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentValidation;
 
-namespace SBAPI.Application.Features.BranchOfficeFeature.Commands.CreateBranchOfficeCommand
+namespace SBAPI.Application.Features.BranchOfficeFeature.Commands.UpdateBranchOfficeCommand
 {
-    public class CreateBranchOfficeCommandValidator : AbstractValidator<CreateBranchOfficeCommand>
-    {
-        public CreateBranchOfficeCommandValidator()
-        {
+	public class UpdateBranchOfficeCommandValidator : AbstractValidator<UpdateBranchOfficeCommand>
+	{
+		public UpdateBranchOfficeCommandValidator()
+		{
             RuleFor(p => p.CompanyId)
-                .NotEmpty().WithMessage("{PropertyName} no puede ser vacio");
+               .NotEmpty().WithMessage("{PropertyName} no puede ser vacio");
             RuleFor(p => p.Name)
                   .NotEmpty().WithMessage("{PropertyName} no puede ser vacio")
                   .MaximumLength(50).WithMessage("{PropertyName} no debe exceder {MaxLength} caracteres");
@@ -27,7 +23,7 @@ namespace SBAPI.Application.Features.BranchOfficeFeature.Commands.CreateBranchOf
                   .MaximumLength(150).WithMessage("{PropertyName} no debe exceder {MaxLength} caracteres");
             RuleFor(p => p.IsActive)
                   .NotEmpty().WithMessage("{PropertyName} no puede ser vacio");
-                  
         }
-    }
+	}
 }
+

@@ -1,14 +1,28 @@
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\bin\Debug\net7.0\SBAPI.Domain.deps.json
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\bin\Debug\net7.0\SBAPI.Domain.runtimeconfig.json
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\bin\Debug\net7.0\SBAPI.Domain.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\bin\Debug\net7.0\SBAPI.Domain.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.csproj.AssemblyReference.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.AssemblyInfoInputs.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.AssemblyInfo.cs
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.csproj.CoreCompileInputs.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\refint\SBAPI.Domain.dll
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.pdb
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\SBAPI.Domain.genruntimeconfig.cache
-C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Domain\obj\Debug\net7.0\ref\SBAPI.Domain.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.deps.json
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.runtimeconfig.json
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.pdb
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.csproj.AssemblyReference.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.AssemblyInfoInputs.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.AssemblyInfo.cs
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.csproj.CoreCompileInputs.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/refint/SBAPI.Domain.dll
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.pdb
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.genruntimeconfig.cache
+C:/Users/josec/Documents/repositorios personales/sb-api/SBAPI.Domain/obj/Debug/net7.0/ref/SBAPI.Domain.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.deps.json
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.runtimeconfig.json
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/bin/Debug/net7.0/SBAPI.Domain.pdb
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.csproj.AssemblyReference.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.AssemblyInfoInputs.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.AssemblyInfo.cs
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.csproj.CoreCompileInputs.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/refint/SBAPI.Domain.dll
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.pdb
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/SBAPI.Domain.genruntimeconfig.cache
+/Users/jcubas/Documents/GitHub/sb-api/SBAPI.Domain/obj/Debug/net7.0/ref/SBAPI.Domain.dll

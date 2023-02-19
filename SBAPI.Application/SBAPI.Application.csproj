@@ -9,19 +9,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Ardalis.Specification" Version="6.1.0" />
-    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
-    <PackageReference Include="FluentValidation" Version="11.4.0" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
-    <PackageReference Include="MailKit" Version="3.4.3" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.5.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.0" />
+    <PackageReference Include="MailKit" Version="3.5.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.3" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Features\CompanyFeature\Queries\" />
     <Folder Include="Features\UserFeature\Commands\UpdateUserCommand\" />
     <Folder Include="Features\UserFeature\Queries\" />
     <Folder Include="Parameters\" />
+    <Folder Include="Features\BranchOfficeFeature\Commands\UpdateBranchOfficeCommand\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Features\BranchOfficeFeature\Commands\UpdateBranchOfficeCommand\" />
+    <None Remove="MediatR" />
   </ItemGroup>
 </Project>

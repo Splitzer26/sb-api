@@ -4,11 +4,6 @@ using SBAPI.Application.DTOs.Bank;
 using SBAPI.Application.Repository;
 using SBAPI.Application.Wrappers;
 using SBAPI.Domain.Entities.Banks;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SBAPI.Application.Features.BankFeature.Queries
 {

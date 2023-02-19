@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SBAPI.Infraestructure
-build_property.ProjectDir = C:\Users\josec\Documents\repositorios personales\sb-api\SBAPI.Infraestructure\
+build_property.ProjectDir = /Users/jcubas/Documents/GitHub/sb-api/SBAPI.Infraestructure/
